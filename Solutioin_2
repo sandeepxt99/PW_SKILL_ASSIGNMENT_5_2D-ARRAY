@@ -6,3 +6,12 @@ You have n coins and you want to build a staircase with these coins. The stairca
 Given the integer n, return *the number of **complete rows** of the staircase you will build*.
 
  */
+ int arrangeCoins(int n) {
+        int i=1, count=0; 
+        while(n>0){
+            n-=i; 
+            if(n>=0)count++;
+            i++; 
+        }
+        return count; 
+}
